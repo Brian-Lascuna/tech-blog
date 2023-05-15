@@ -17,10 +17,10 @@
             </div>
         </div>
         {{#unless logged_in}}
-        <form class="container-fluid justify-content-end">
-            <button class="btn btn-primary me-2" type="button">Sign Up</button>
-            <button class="btn btn-primary me-2" type="button">Login</button>
-        </form>
+        <div class="container-fluid justify-content-end">
+            <button class="btn btn-primary me-2" type="button" id="signup-btn">Sign Up</button>
+            <button class="btn btn-primary me-2" type="button" id="login-btn">Login</button>
+        </div>
         {{else}}
         <form class="container-fluid justify-content-end">
             <button class="btn btn-primary me-2" type="button">Logout</button>
