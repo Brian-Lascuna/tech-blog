@@ -1,3 +1,12 @@
-header {
-    background-color: brown;
+h2 {
+    margin-right: 30px;
+    color: white;
+}
+
+h3 {
+    background-color: black;
+    color: white;
+    margin-top: 50px;
+    padding: 20px 500px;
+    border-radius: 8px;
 }

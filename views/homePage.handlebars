@@ -1,6 +1,7 @@
 <header>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
+            <h2 class="homepage-logo">Tech Blog</h2>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
             </button>
@@ -15,5 +16,20 @@
                 </ul>
             </div>
         </div>
+        {{#unless logged_in}}
+        <form class="container-fluid justify-content-end">
+            <button class="btn btn-primary me-2" type="button">Sign Up</button>
+            <button class="btn btn-primary me-2" type="button">Login</button>
+        </form>
+        {{else}}
+        <form class="container-fluid justify-content-end">
+            <button class="btn btn-primary me-2" type="button">Logout</button>
+        </form>
+        {{/unless}}
     </nav>
 </header>
+<div class="post-container d-flex justify-content-center">
+    {{#unless logged_in}}
+    <h3 class="login-alert">Login or sign-up to post to the blog!</h2>
+    {{/unless}}
+</div>
