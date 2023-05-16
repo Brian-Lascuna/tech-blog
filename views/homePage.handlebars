@@ -22,9 +22,9 @@
             <button class="btn btn-primary me-2" type="button" id="login-btn">Login</button>
         </div>
         {{else}}
-        <form class="container-fluid justify-content-end">
-            <button class="btn btn-primary me-2" type="button">Logout</button>
-        </form>
+        <div class="container-fluid justify-content-end">
+            <button class="btn btn-primary me-2" type="button" id="logout-btn">Logout</button>
+        </div>
         {{/unless}}
     </nav>
 </header>
@@ -33,3 +33,6 @@
     <h3 class="login-alert">Login or sign-up to post to the blog!</h2>
     {{/unless}}
 </div>
+{{#if logged_in}}
+<script src="/js/logout.js"></script>
+{{/if}}

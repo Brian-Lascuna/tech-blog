@@ -7,15 +7,15 @@ router.get('/', (req, res) => {
       style: 'homepage.css',
       script: 'homepage.js',
       title: 'Tech Blog',
-      /* logged_in: req.session.logged_in */
+      logged_in: req.session.logged_in
     });
 });
 
 router.get('/login', (req, res) => {
-  /* if (req.session.logged_in) {
+  if (req.session.logged_in) {
     res.redirect('/');
     return;
-  } */
+  }
 
   res.render('login', { 
     style: 'login.css',
