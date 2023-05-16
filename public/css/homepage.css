@@ -10,3 +10,8 @@ h3 {
     padding: 20px 500px;
     border-radius: 8px;
 }
+
+#post-btn {
+    position: absolute;
+    bottom: 30px;
+}

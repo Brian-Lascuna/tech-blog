@@ -8,7 +8,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="#">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                     </li>
                     <li class="nav-item">
                     <a class="nav-link active" href="#">Dashboard</a>
@@ -28,14 +28,15 @@
         {{/unless}}
     </nav>
 </header>
-<div class="post-container d-flex justify-content-center">
-    {{#unless logged_in}}
-    <h3 class="login-alert">Login or sign-up to post to the blog!</h2>
-    {{/unless}}
+<div class="post-container">
+    <form class="blog-form d-flex flex-column">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Subject" aria-label="content-subject" aria-describedby="subject">
+        </div>
+        <div class="form-floating">
+            <textarea class="form-control" aria-label="comment" id="post-content"></textarea>
+            <label for="post-content">Post a comment</label>
+        </div>
+        <button type="submit" class="btn btn-primary">Post</button>
+    </form>
 </div>
-{{#if logged_in}}
-<center>
-    <button class="btn btn-primary me-2" id="post-btn">+ New Post</button>
-</center>
-<script src="/js/logout.js"></script>
-{{/if}}
